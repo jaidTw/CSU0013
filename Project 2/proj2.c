@@ -21,19 +21,15 @@
 #define CNV_ERR_RET(x) { fprintf(stderr, "AN ERROR OCCUR WHILE CONVERTING!\n"); return (x); }
 
 // Check the parentheses matching, return -1 on error, else 0.
-// The string has to be guaranteed end with '\0'.
 int match_parentheses(char *);
 
 // Eliminate the spaces inside the string, convert {}s, []s into ()s;
-// The string has to be guaranteed end with '\0'.
 int normalize_exp(char *);
 
-// Convert an infix expression to postfix.
-// The string has to be guaranteed end with '\0', return -1 on error, else 0.
+// Convert an infix expression to postfix, return -1 on error, else 0.
 int infix2postfix(char *);
 
-// Evaluate an postfix arithmetic expression.
-// The string has to be guaranteed end with '\0', return -1 on error, else 0.
+// Evaluate an postfix arithmetic expression, return -1 on error, else 0.
 int evaluate_postfix(char *);
 
 // Convert an operator character to an integer used for indexing isp and icp.
